@@ -48,7 +48,7 @@ function getWinner(playerMove,computerMove) {
     // to account for input that doesn't match exactly, could write a switch()/case statement?
     // can it take 2 args?
 
-    if (pM === 'rock' && cM === 'rock') {
+    if (pM === cM) {
         winner = 'tie';
         return winner;
     } else if (pM === 'rock' && cM === 'paper') {
@@ -57,17 +57,11 @@ function getWinner(playerMove,computerMove) {
     } else if (pM === 'rock' && cM === 'scissors') {
         winner = 'player';
         return winner;
-    } else if (pM === 'paper' && cM === 'paper') {
-        winner = 'tie';
-        return winner;
     } else if (pM === 'paper' && cM === 'scissors') {
         winner = 'computer';
         return winner;
     } else if (pM === 'paper' && cM === 'rock') {
         winner = 'player';
-        return winner;
-    } else if (pM === 'scissors' && cM === 'scissors') {
-        winner = 'tie';
         return winner;
     } else if (pM === 'scissors' && cM === 'paper') {
         winner = 'player';
